@@ -1,25 +1,42 @@
+#include <stdio.h>
 
-switch(disc){
-                case 25:
+int main()
+{
+        int calls,category;
+        float amt;
+        printf("Enter the number of calls you placed: ");
+        scanf("%d",&calls);
+        if (calls<=100)
+                category=1;
+        else if (calls>100 && calls<=150)
+                category=2;
+        else if (calls>150 && calls<=200)
+                category=3;
+        else 
+                category=4;
+        switch(category){
+                case 1:
                         {
-                                //disc=25;
-                                amt=(price-(price*0.25));
-                                printf("The discount is : %d %% and amount is: Rs. %.2f\n",disc,amt);
+                                amt=200;
+                                printf("The bill is: Rs. %.2f"amt);
                         }
                         break;
-                case 20:
+                case 2:
                         {
-                                //disc=20;
-                                amt=(price-(price*0.20));
-                                printf("The discount is : %d %% and amount is: Rs. %.2f\n",disc,amt);
+                                amt=((calls-100)*0.60)+200;
+                                printf("The bill is: Rs. %.2f"amt);
                         }
                         break;
-                //case 3:
-                default:
+                case 3:
                         {
-                                //disc=0;
-                                amt=price;
-                                printf("The discount is: %d %% and amount is: Rs. %.2f\n",disc,amt);
+                                amt=((calls-150)*0.50)+230;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 4:
+                        {
+                                amt=((calls-200)*0.40)+255;
+                                printf("The bill is: Rs. %.2f"amt);
                         }
                         break;
         }
