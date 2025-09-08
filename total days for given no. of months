@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+        int m,days=0,year;
+        printf("Enter the number of months: ");
+        scanf("%d",&m);
+        printf("Enter the year: ");
+        scanf("%d",&year);
+        if(m>=1) days+=31;
+        if(m>=2){
+                if ((year%4==0&&year%100!=0)||(year%400==0))
+                        days+=29;
+                else
+                        days+=28;
+        }
+        if (m>=3) days+=31;
+        if (m>=4) days+=30;
+        if (m>=5) days+=31;
+        if (m>=6) days+=30;
+        if (m>=7) days+=31;
+        if (m>=8) days+=31;
+        if (m>=9) days+=30;
+        if (m>=10) days+=31;
+        if (m>=11) days+=30;
+        if (m>=12) days+=31;
+        printf("The number of days counting from January are: %d",days);
+        return 0;
+}
