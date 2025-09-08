@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+        int n,num=0,remainder;
+        printf("Enter a number: ");
+        scanf("%d",&n);
+        int i=1;
+        while(n!=0){
+                remainder = n % 2;
+                n /= 2;
+                num += remainder * i;
+                i *= 10;
+        }
+        printf("The binary is: %d",num);
+        return 0;
+}
