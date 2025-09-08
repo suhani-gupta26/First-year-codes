@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+        int calls,category;
+        float amt;
+        printf("Enter the number of units: ");
+        scanf("%d",&units);
+        if (units<=100 && units>=1)
+                category=1;
+        if (units>=101 && units<=200)
+                category=2;
+        if (calls>=201 && units<=400)
+                category=3;
+        if (units>=401) 
+                category=4;
+        switch(category){
+                case 1:
+                        {
+                                amt=0;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 2:
+                        {
+                                amt=((units-100)*1.5);
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 3:
+                        {
+                                amt=((units-200)*2.5)+150;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 4:
+                        {
+                                amt=((units-400)*3.5)+650;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+        }
+        return 0;
+}
