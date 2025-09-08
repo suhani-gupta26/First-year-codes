@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+        double mm,inch,cm,feet;
+        printf("Enter distance in mm: ");
+        scanf("%lf",&mm);
+        feet=mm/300;
+        inch=mm/25;
+        cm=mm/10;
+        printf("Therefore distance in cm,inches,feet is: %lf, %lf, %lf",cm,inch,feet);
+        return 0;
+}
