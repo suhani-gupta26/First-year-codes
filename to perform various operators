@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main()
+{
+        float a,b;
+        char letter;
+        printf("Enter the first letter of the operation you wish to perform (Add/Subtract/Multiply/Divide): ");
+        scanf("%c",&letter);
+        printf("Enter the numbers you wish to perform the operation on: ");
+        scanf("%f%f",&a,&b);
+        switch(letter){
+                case 'A':
+                case 'a':
+                        {
+                                int sum;
+                                sum=a+b;
+                                printf("The sum of the numbers is: %d",sum);
+                        }
+                        break;
+                case 's':
+                case 'S':
+                        {
+                                int diff;
+                                diff=a-b;
+                                printf("The difference of the numbers is: %d",diff);
+                        }
+                        break;
+                case 'm':
+                case 'M':
+                        {
+                                int product;
+                                product=a*b;
+                                printf("The product of the numbers is: %d",product);
+                        }
+                        break;
+                case 'D':
+                case 'd':
+                        {
+                                float quotient;
+                                quotient=a/b;
+                                printf("The quotient of the numbers is: %f",quotient);
+                        }
+                        break;
+                default:
+                        printf("Invalid option.");
+        }
+        return 0;
+}
