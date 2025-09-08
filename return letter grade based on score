@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+     int score;
+     printf("Enter your quiz score: ");
+     scanF("%d",&score);
+     if (score>=9 && score<=10)
+        printf("A");
+     else if (score>=7 && score<=8)
+        printf("B");
+     else if (score>=5 && score<=6)
+        printf("C");
+     else if (score>=3 && score<=4)
+        printf("D");
+     else if (score<3)
+        printf("F");
+     else 
+        printf("Enter score from 0-10 only.");
+     return 0;
+}
