@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+        int price,disc=0;
+        float amt;
+        printf("Enter the cost price: ");
+        scanf("%d",&price);
+        if (price>=800)
+                disc=25;
+        else if (price>=500 && price<800)
+                disc=20;
+        else
+                disc=0;
+
+        switch(disc){
+                case 25:
+                        {
+                                //disc=25;
+                                amt=(price-(price*0.25));
+                                printf("The discount is : %d %% and amount is: Rs. %.2f\n",disc,amt);
+                        }
+                        break;
+                case 20:
+                        {
+                                //disc=20;
+                                amt=(price-(price*0.20));
+                                printf("The discount is : %d %% and amount is: Rs. %.2f\n",disc,amt);
+                        }
+                        break;
+                //case 3:
+                default:
+                        {
+                                //disc=0;
+                                amt=price;
+                                printf("The discount is: %d %% and amount is: Rs. %.2f\n",disc,amt);
+                        }
+                        break;
+        }
+        return 0;
+}
