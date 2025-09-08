@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+        int calls,category;
+        float amt;
+        printf("Enter the number of calls you placed: ");
+        scanf("%d",&calls);
+        if (calls<=150 && calls>=1)
+                category=1;
+        if (calls>=151 && calls<=250)
+                category=2;
+        if (calls>=251 && calls<=400)
+                category=3;
+        if (calls>=401) 
+                category=4;
+        switch(category){
+                case 1:
+                        {
+                                amt=0;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 2:
+                        {
+                                amt=((calls-150)*0.9);
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 3:
+                        {
+                                amt=((calls-250)*1.2)+90;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+                case 4:
+                        {
+                                amt=((calls-400)*1.5)+330;
+                                printf("The bill is: Rs. %.2f"amt);
+                        }
+                        break;
+        }
+        return 0;
+}
