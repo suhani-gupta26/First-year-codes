@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+        float a,b,c,D,root1,root2;
+
+        printf("Enter the values of a,b,c for the quadratic equation ax^2+bx+c: ");
+        scanf("%f%f%f",&a,&b,&c);
+        printf("Your quadratic equation is: %.1fx^2+%.1fx+%.1f",a,b,c);
+
+        D=pow(b,2)-4*a*c;
+        printf("\nThe discriminant is: %.2f",D);
+        if(D>0)
+        {
+                root1=(-b+sqrt(D))/(2*a);
+                root2=(-b-sqrt(D))/(2*a);
+                printf("\nThe roots of the equation are: %.2f,%.2f",root1,root2);
+        }
+        else if(D==0)
+        {
+                root1=-b/(2*a);
+                root2=root1;
+                printf("\nThe roots of the equation are: %.2f,%.2f",root1,root2);
+        }
+        else
+        {      
+                printf("\nThe roots are imaginary.);
+        }
+return 0;
+}
